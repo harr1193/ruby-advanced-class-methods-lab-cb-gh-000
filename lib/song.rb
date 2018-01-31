@@ -11,7 +11,10 @@ class Song
   end
 
   def create
-    self.name = name
-    @@all.save
+    temp = self.new
+    if !self.all.include?(temp)
+      self.all << temp
+    end
+    temp
   end
 end
