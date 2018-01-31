@@ -39,4 +39,14 @@ class Song
   def self.alphabetical
     self.all.sort_by {|s| s.name}
   end
+
+  def self.new_from_filename(filename)
+    seperator = filename.split(" - ")
+    artist_name = seperator[0]
+    song_name = seperator[1].gsub(".mp3", "")
+
+    song = self.name
+    song.artist_name = artist_name
+    song
+  end
 end
