@@ -26,5 +26,6 @@ class Song
     temp = self.create
     temp.name = name
     temp.save
+    temp
   end
 end
