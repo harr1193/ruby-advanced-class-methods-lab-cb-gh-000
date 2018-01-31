@@ -45,7 +45,8 @@ class Song
     artist_name = seperator[0]
     song_name = seperator[1].gsub(".mp3", "")
 
-    song = self.name
+    song = self.new
+    song.name = song_name
     song.artist_name = artist_name
     song
   end
