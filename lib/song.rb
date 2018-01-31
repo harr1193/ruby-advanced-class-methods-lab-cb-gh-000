@@ -12,9 +12,7 @@ class Song
 
   def self.create
     temp = self.new
-    if !self.all.include?(temp)
-      self.all << temp
-    end
+    temp.save
     temp
   end
 
