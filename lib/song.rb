@@ -28,4 +28,8 @@ class Song
     temp.save
     temp
   end
+
+  def find_by_name(name)
+    Song.all.detect {|p| p.name == name}
+  end
 end
