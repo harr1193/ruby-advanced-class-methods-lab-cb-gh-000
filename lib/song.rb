@@ -21,6 +21,9 @@ class Song
   def self.new_by_name(name)
     temp.create
     temp.name = name
+    if !self.all.include?(temp)
+      self.all << temp
+    end
     temp
   end
 end
