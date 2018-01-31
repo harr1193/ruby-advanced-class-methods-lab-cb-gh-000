@@ -11,6 +11,7 @@ class Song
   end
 
   def create
-    self.save
+    self.name = name
+    @@all.save
   end
 end
